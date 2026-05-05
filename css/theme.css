@@ -1,0 +1,259 @@
+* {
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+:root {
+    --gold-dark: darkgoldenrod;   
+    --gold-light: gold;  
+    --bg-color: white;
+    --text-color: black;
+    --border-color: #d3d3d3;
+    --grey-dark: #d3d3d3;   
+}
+body.dark-theme {
+    --bg-color: black;   
+    --text-color: white;
+    --border-color: #696969;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+}
+button, .cta-btn, .planbutton, .checkoutbutton, #dd, .mainbutton {
+    background-color: var(--gold-dark) !important;
+    color: black !important;
+    border: none !important;
+    border-radius: 30px !important;
+    padding: 12px 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover, .cta-btn:hover, .planbutton:hover, .checkoutbutton:hover, #dd:hover, .mainbutton:hover {
+    background-color: black !important;
+    color: var(--gold-dark) !important;
+}
+.planbutton, .mainbutton {
+    background-color: var(--grey-dark) !important;
+    color: black !important;
+}
+.planbutton:hover, .mainbutton:hover {
+    background-color: white !important;
+    color: var(--gold-dark) !important;
+    border: 1px solid var(--gold-dark) !important;
+}
+body.dark-theme button, 
+body.dark-theme .cta-btn, 
+body.dark-theme .planbutton, 
+body.dark-theme .checkoutbutton, 
+body.dark-theme #dd, 
+body.dark-theme .mainbutton {
+    background-color: var(--gold-dark) !important;
+    color: white !important;
+}
+body.dark-theme button:hover, 
+body.dark-theme .cta-btn:hover, 
+body.dark-theme .planbutton:hover, 
+body.dark-theme .checkoutbutton:hover, 
+body.dark-theme #dd:hover, 
+body.dark-theme .mainbutton:hover {
+    background-color: white !important;
+    color: var(--gold-dark) !important;
+}
+body.dark-theme .planbutton, 
+body.dark-theme .mainbutton {
+    background-color: var(--grey-dark) !important;
+    color: white !important;
+}
+body.dark-theme .planbutton:hover, 
+body.dark-theme .mainbutton:hover {
+    background-color: var(--grey-dark) !important;
+    color: var(--gold-dark) !important;
+}
+body.dark-theme, body.dark-theme div, body.dark-theme section, body.dark-theme table, body.dark-theme td {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+.price-box h2, .planprice h2, tbody td {
+    color: var(--gold-dark) !important;
+}
+input:hover, textarea:hover, input:focus {
+    border-color: var(--gold-dark) !important;
+    box-shadow: 0 0 8px lightgray;
+    outline: none;
+}
+thead {
+    background-color: var(--gold-light) !important;
+}
+body.dark-theme thead {
+    background-color: var(--gold-dark) !important;
+}
+.plancard:hover {
+    background-color: var(--gold-light) !important;
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px black;
+}
+body.dark-theme .plancard:hover div,
+body.dark-theme .plancard:hover ul,
+body.dark-theme .plancard:hover li {
+    background-color: transparent !important; 
+}
+header {
+    background-color: white;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px lightgray;
+    transition: all 0.3s ease;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img {
+    height: 45px;
+    display: block;
+}
+
+
+.navlinks ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+.navlinks a {
+    text-decoration: none;
+    color: darkgoldenrod; 
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.navlinks a:hover {
+    color: black;}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.icon-btn, .icon-link, .search, .user, .moon {
+    background: none;
+    border: none;
+    color: darkgoldenrod;
+    font-size: 1.3rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.icon-btn:hover, .icon-link:hover, .search:hover, .user:hover, .moon:hover {
+    color: black;
+    transform: translateY(-2px);}
+
+body.dark-theme header {
+    background-color: black !important;
+    box-shadow: 0 4px 20px black; 
+    border-bottom: 1px solid dimgray;
+}
+body.dark-theme .navlinks a:hover{
+  color: white;
+}
+.footer {
+    background-color: white;
+    color: black;
+    padding: 60px 8% 30px;
+    margin-top: auto;
+    border-top: 1px solid lightgray;
+    box-shadow: 0 -5px 20px lightgray;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+.fcontent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;}
+
+.footerdiv {
+    flex: 1;
+    min-width: 220px;
+}
+.footerdiv h3 {
+    color: darkgoldenrod;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.footerdiv p, .footerdiv ul li a {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: dimgray;
+    text-decoration: none;
+}
+
+.footerdiv ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footerdiv ul li a:hover {
+    color: darkgoldenrod;
+    padding-left: 8px;
+    transition: 0.3s;
+}
+
+.divider {
+    margin: 40px 0 25px;
+    border: 0;
+    height: 1px;
+    background: lightgray;
+}
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.sociallinks .icons a {
+    color: darkgoldenrod;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+.sociallinks .icons a:hover {
+    color: black;
+    transform: translateY(-5px);
+}
+body.dark-theme .footer {
+    background-color: black !important;
+    color: white !important;
+    box-shadow: 0 -8px 25px black;
+}
+body.dark-theme .footerdiv p, 
+body.dark-theme .footerdiv ul li a {
+    color: lightgray !important;
+}
+
+body.dark-theme .footerdiv ul li a:hover,
+body.dark-theme .sociallinks .icons a:hover {
+    color: white !important;
+}
+input.invalid {
+    border: 2px solid red !important;
+}
+.status_msg {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+}

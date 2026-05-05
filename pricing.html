@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pricing Plans | Muntaj</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .pricing {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(184, 134, 11, 0.4);
+        }
+
+        .plans {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 30px;
+            max-width: 1100px;
+            margin: 30px auto 80px;
+            padding: 20px;
+        }
+
+        .plancard {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            padding: 40px 30px;
+            border: 1px solid;
+            border-radius: 15px;
+            background-color: transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .planinfo {
+            text-align: center;
+        }
+
+        .planprice h2 {
+            font-size: 2.5rem;
+            margin: 10px 0;
+        }
+
+        .featureslist {
+            list-style: none;
+            text-align: left;
+            padding: 0;
+            margin-top: 20px;
+            line-height: 2.2;
+        }
+
+        .featureslist li::before {
+            content: '✓ ';
+            margin-right: 10px;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid;
+            margin: 20px 0;
+        }
+
+        body.dark-theme .plan-card:hover {
+            background-color: gold !important;
+        }
+
+        body.dark-theme .plan-card:hover .plan-info,
+        body.dark-theme .plan-card:hover h2,
+        body.dark-theme .plan-card:hover p,
+        body.dark-theme .plan-card:hover b,
+        body.dark-theme .plan-card:hover li,
+        body.dark-theme .plan-card:hover li::before,
+        body.dark-theme .plan-card:hover small {
+            color: #000000 !important;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+
+<body>
+ <header>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"></a><img src="assets/logo.png" alt="Muntaj Logo"></a>
+        </div>
+        <nav class="navlinks">
+            <ul>
+             <li><a href="index.html">home</a></li>
+             <li><a href="products.html">products</a></li>
+             <li><a href="pricing.html">Pricing</a></li>
+             <li><a href="cart.html">cart</a></li>
+             <li><a href="contactUs.html">contact us</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+         <button class="search" id="search button"><i class="fas fa-search"></i></button>
+         <button class="user" onclick="location.href='account.html'"><i class="fas fa-user"></i></button>
+         <button class="moon" id="theme-switcher"><i class="fas fa-moon"></i></button>
+        </div>
+    </div>
+ </header>
+
+ <div class="pricing">
+    <h1>pricing plans</h1>
+    <p>choose the right plan for your needs.</p>
+ </div>
+
+ <main class="plans">
+    <div class="plancard">
+      <div class="planinfo">
+        <p><b>Starter</b></p>
+        <div class="planprice">
+        <h2>0 EGP<small>/month</small></h2>
+       </div>
+      <p>Perfect for individuals</p>
+      <hr>
+      <ul class="featureslist">
+      <li>Access to Basic Products</li>
+         <li>Standard Delivery</li></ul>
+     </div>
+    <button class="planbutton" onclick="window.location.href='products.html'">Start Shopping</button>
+   </div>
+
+   <div class="plancard">
+      <div class="plan info">
+       <p><b>premium</b></p>
+         <div class="planprice">
+           <h2>150 EGP<small>/month</small></h2>
+             </div>
+               <p>Perfect for frequent buyers</p>
+                <hr>
+                <ul class="featureslist">
+                  <li>exclusive Products</li>
+                  <li>free Shipping</li>
+                 <li>24/7 Priority Support</li>
+                 <li>5% Discount</li>
+                </ul>
+            </div>
+            <button class="planbutton" onclick="window.location.href='checkout.html'">get preium</button>
+            </div>
+
+        <div class="plancard">
+           <div class="planinfo">
+          <p><b>BUSINESS</b></p>
+          <div class="planprice">
+           <h2>custom</h2>
+         </div>
+          <p>for wholesale and organizations</p>
+            <hr>
+               <ul class="featureslist">
+                 <li>Wholesale Pricing</li>
+                 <li>Bulk Order Management</li>
+                 <li>Dedicated Account Manager</li>
+                 <li>Advanced Access</li>
+                </ul>
+           </div>
+          <button class="planbutton" onclick="window.location.href='contactUs.html'">Contact Us</button>
+        </div>
+ </main>
+
+ <footer class="footer"> 
+     <div class="fcontent">
+        <div class="footerdiv">
+            <p>quality that drives your development.</p>
+            <p>discover products that fit your needs.</p>
+        </div>
+
+        <div class="footerdiv">
+            <h3>quick services</h3>
+            <ul>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="contactUs.html">customer support</a></li>
+            </ul>
+        </div>
+
+        <div class="footerdiv">
+            <h3>Work Times</h3>
+            <p>Sat - Thu: 9:00 AM - 11:00 PM</p>
+            <p>Friday: 2:00 PM - 12:00 AM</p>
+        </div>
+
+        <div class="footerdiv">
+            <h3>contact Us</h3>
+            <p><i class="fas fa-map-marker-alt"></i> egypt</p>
+            <p><i class="fas fa-phone"></i> 01094493023</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="bottom">
+        <div class="sociallinks">
+            <h4>follow us</h4>
+            <div class="icons">
+                <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026. all rights reserved.</p>
+        </div>
+    </div>
+ </footer>
+ <script src="js/data.js"></script>
+ <script src="js/validation.js"></script>
+ <script src="js/storage.js"></script>
+ <script src="js/main.js"></script>
+</body>
+</html>

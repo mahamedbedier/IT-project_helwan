@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart | Muntaj</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .cartpage {
+            display: flex;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            align-items: flex-start;
+        }
+
+        .cartsection {
+            flex: 2;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        thead th {
+            padding: 15px 10px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        tbody td {
+            padding: 20px 10px;
+            border-bottom: 1px solid #eee;
+            vertical-align: middle;
+        }
+
+        .productsection {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .productsection img {
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .quantitybox {
+            display: flex;
+            align-items: center;
+        }
+
+        .quantitybox button {
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .quantitybox input {
+            width: 35px;
+            text-align: center;
+        }
+
+        .deletebutton button {
+            cursor: pointer;
+            text-decoration: underline;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .cartsummary {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            position: sticky;
+            top: 20px;
+        }
+
+        .summaryline {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+
+        .totalline {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 2px solid #ddd;
+            font-weight: bold;
+        }
+
+        .checkoutbutton {
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 30px; 
+            border: 1px solid #ccc;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+
+<body>
+ <header>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"></a><img src="assets/logo.png" alt="Muntaj Logo"></a>
+        </div>
+        <nav class="navlinks">
+            <ul>
+             <li><a href="index.html">home</a></li>
+             <li><a href="products.html">products</a></li>
+             <li><a href="pricing.html">Pricing</a></li>
+             <li><a href="cart.html">cart</a></li>
+             <li><a href="contactUs.html">contact us</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+         <button class="search" id="search button"><i class="fas fa-search"></i></button>
+         <button class="user" onclick="location.href='account.html'"><i class="fas fa-user"></i></button>
+         <button class="moon" id="theme-switcher"><i class="fas fa-moon"></i></button>
+        </div>
+    </div>
+ </header>
+
+ <main  class="cartpage">
+        <section class="cartsection">
+            <h1>shopping cart</h1>
+             <table id="carttable">
+                <thead>
+                    <tr>
+                        <th>product</th>
+                        <th>quantity</th>
+                        <th>pice</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody id="cartbody">
+                    <tr>
+                        <td>
+                            <div class="productsection">
+                                <img src="assets/img1.png" alt="product">
+                                <div>
+                                    <h3>product name</h3>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="quantitybox">
+                                <input type="number" value="">
+                            </div>
+                        </td>
+                        <td><strong>180.00 EGP</strong></td>
+                  <td>
+                         <button class="iconbutton deletebutton">
+    <i class="fas fa-trash-alt"></i>
+</button>
+
+             </td>
+
+                    </tr>
+                </tbody>
+                </table>
+             </section>
+
+        <aside class="cartsummary">
+            <h3>order summary</h3>
+            <div class="summaryline">
+                <span>shipping</span>
+                <span>free</span>
+            </div>
+            <div class="totalline">
+                <span>total</span>
+                <span id="totalprice">180.00 EGP</span>
+            </div>
+            <button class="checkoutbutton" onclick="location.href='checkout.html'" onclick="goToCheckout()">checkout</button>
+        </aside>
+ </main>
+ <footer class="footer"> 
+     <div class="fcontent">
+        <div class="footerdiv">
+            <p>quality that drives your development.</p>
+            <p>discover products that fit your needs.</p>
+        </div>
+
+        <div class="footerdiv">
+            <h3>quick services</h3>
+            <ul>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="contactUs.html">customer support</a></li>
+            </ul>
+        </div>
+
+        <div class="footerdiv">
+            <h3>Work Times</h3>
+            <p>Sat - Thu: 9:00 AM - 11:00 PM</p>
+            <p>Friday: 2:00 PM - 12:00 AM</p>
+        </div>
+
+        <div class="footerdiv">
+            <h3>contact Us</h3>
+            <p><i class="fas fa-map-marker-alt"></i> egypt</p>
+            <p><i class="fas fa-phone"></i> 01094493023</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="bottom">
+        <div class="sociallinks">
+            <h4>follow us</h4>
+            <div class="icons">
+                <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026. all rights reserved.</p>
+        </div>
+    </div>
+ </footer>
+ <script src="js/data.js"></script>
+ <script src="js/validation.js"></script>
+ <script src="js/storage.js"></script>
+ <script src="js/main.js"></script>
+</body>
+</html>

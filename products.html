@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    section {
+     display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 20px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+        width: 100%;
+        max-width: 1200px; }
+    .card {
+      display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: auto auto auto auto;
+      gap: 15px;
+      padding: 20px;
+      border: 1px solid gray;
+      border-radius: 15px;
+      align-items: center;
+    }
+    img {
+        width: 100%;
+        grid-column: span 2;
+        border-radius: 10px;
+    }
+    h2 {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 20px;
+        grid-column: span 2;
+    }
+    h2 span {
+        color: goldenrod; 
+    }
+    h4 {
+      font-size: 22px;
+      grid-column: span 2;
+    }
+
+    h5 {
+     font-size: 18px;
+    }
+    p {
+      display: none;}
+    .detalis {
+      display: none;
+    }
+    button {
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      border: 1px solid black;
+      border-radius: 30px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .cart-btn {
+        background: transparent;
+    }
+    a {
+      text-decoration: none;
+      width: 100%;}
+</style>
+
+
+</head>
+<body>
+ <header>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"></a><img src="assets/logo.png" alt="Muntaj Logo"></a>
+        </div>
+        <nav class="navlinks">
+            <ul>
+             <li><a href="index.html">home</a></li>
+             <li><a href="products.html">products</a></li>
+             <li><a href="pricing.html">Pricing</a></li>
+             <li><a href="cart.html">cart</a></li>
+             <li><a href="contactUs.html">contact us</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+         <button class="search" id="search button"><i class="fas fa-search"></i></button>
+         <button class="user" onclick="location.href='account.html'"><i class="fas fa-user"></i></button>
+         <button class="moon" id="theme-switcher"><i class="fas fa-moon"></i></button>
+        </div>
+    </div>
+ </header>
+
+
+    <section>
+        <h2><span>Electric</span> Products</h2>
+        <div class="cards">
+            
+            <div id="product-1" class="card">
+                <img src="assets/nothing.jpg" alt="Nothing Phone 3a">
+                <h4>Nothing Phone 3a</h4>
+                <p>A unique smartphone featuring a transparent design, smooth performance, and long-lasting battery. The ultimate choice for standing out.</p>
+                <h5>Rating: <span>4.5</span></h5>
+                <h5>Price: <span>500$</span></h5>
+                <button class="detalis-button" onclick="saveProduct('Nothing Phone 3a', '500$', 'assets/nothing.jpg', 'A unique smartphone featuring a transparent design, smooth performance, and long-lasting battery. The ultimate choice for standing out.', 'assets/nothing-d1.jpg', 'assets/nothing-d2.jpg', 'assets/nothing-d3.jpg', 'assets/nothing-d4.jpg')">Details</button>
+            </div>
+            
+            <div id="product-2" class="card">
+                <img src="assets/iphone-air.jpg" alt="iPhone Air">
+                <h4>iPhone Air</h4>
+                <p>The thinnest and lightest iPhone ever, featuring a stunning display and a pro-grade camera to capture every detail flawlessly.</p>
+                <h5>Rating: <span>4.8</span></h5>
+                <h5>Price: <span>1500$</span></h5>
+                <button class="detalis-btn" onclick="saveProduct('iPhone Air', '1500$', 'assets/iphone-air.jpg', 'The thinnest and lightest iPhone ever, featuring a stunning display and a pro-grade camera to capture every detail flawlessly.', 'assets/iphone-air-d1.jpg', 'assets/iphone-air-d2.jpg', 'assets/iphone-air-d3.jpg', 'assets/iphone-air-d4.jpg')">Details</button>
+            </div>
+            
+            <div id="product-3" class="card">
+                <img src="assets/iphone17.png" alt="iPhone 17 Pro">
+                <h4>iPhone 17 Pro</h4>
+                <p>The ultimate flagship with a powerhouse chip and a premium titanium build, designed for an unparalleled user experience.</p>
+                <h5>Rating: <span>4.9</span></h5>
+                <h5>Price: <span>1800$</span></h5>
+                <button class="detalis-btn" onclick="saveProduct('iPhone 17 Pro', '1800$', 'assets/iphone17.png', 'The ultimate flagship with a powerhouse chip and a premium titanium build, designed for an unparalleled user experience.',  'assets/iphone17.png', 'assets/iphone17-d1.png', 'assets/iphone17-d2.png', 'assets/iphone17-d4.png')">Details</button>
+            </div>
+            
+            <div id="product-4" class="card">
+                <img src="assets/tablet.jpg" alt="Tablet Ultra Max">
+                <h4>Tablet Ultra Max</h4>
+                <p>A massive screen with vibrant colors, perfect for studying, designing, and watching movies in true cinematic quality.</p>
+                <h5>Rating: <span>4.6</span></h5>
+                <h5>Price: <span>850$</span></h5>
+                <button class="detalis-btn" onclick="saveProduct('Tablet Ultra Max', '850$', 'assets/tablet.jpg', 'A massive screen with vibrant colors, perfect for studying, designing, and watching movies in true cinematic quality.', 'assets/tablet-d1.jpg', 'assets/tablet-d2.jpg', 'assets/tablet-d3.jpg', 'assets/tablet-d4.jpg')">Details</button>
+            </div>
+            
+            <div id="product-5" class="card">
+                <img src="assets/tv.png" alt="Smart TV 4K">
+                <h4>Smart TV 4K</h4>
+                <p>A 4K smart TV with true-to-life cinematic colors and an immersive surround sound system that puts you right in the center of the action.</p>
+                <h5>Rating: <span>4.7</span></h5>
+                <h5>Price: <span>1200$</span></h5>
+                <button class="detalis-btn" onclick="saveProduct('Smart TV 4K', '1200$', 'assets/tv.png', 'A 4K smart TV with true-to-life cinematic colors and an immersive surround sound system that puts you right in the center of the action.', 'assets/tv-d1.png', 'assets/tv-d2.png', 'assets/tv-d3.png', 'assets/tv-d4.png')">Details</button>
+            </div>
+
+        </div>
+    </section>
+ <footer class="footer"> 
+     <div class="fcontent">
+        <div class="footerdiv">
+            <p>quality that drives your development.</p>
+            <p>discover products that fit your needs.</p>
+        </div>
+
+        <div class="footerdiv">
+            <h3>quick services</h3>
+            <ul>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="contactUs.html">customer support</a></li>
+            </ul>
+        </div>
+
+        <div class="footerdiv">
+            <h3>Work Times</h3>
+            <p>Sat - Thu: 9:00 AM - 11:00 PM</p>
+            <p>Friday: 2:00 PM - 12:00 AM</p>
+        </div>
+
+        <div class="footerdiv">
+            <h3>contact Us</h3>
+            <p><i class="fas fa-map-marker-alt"></i> egypt</p>
+            <p><i class="fas fa-phone"></i> 01094493023</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="bottom">
+        <div class="sociallinks">
+            <h4>follow us</h4>
+            <div class="icons">
+                <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026. all rights reserved.</p>
+        </div>
+    </div>
+ </footer>
+ <script src="js/product-details.js"></script>
+ <script src="js/validation.js"></script>
+ <script src="js/storage.js"></script>
+ <script src="js/main.js"></script>
+</body>
+</html>

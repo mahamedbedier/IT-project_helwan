@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account | Muntaj</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column; 
+        }
+        .account {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        .auth {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background: var(--input-bg);
+            color: var(--text-color);
+        }
+
+        .main_button {
+            width: 100%;
+            padding: 15px;
+            background: var(--gold-dark);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .switch_button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body> 
+ <header>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"></a><img src="assets/logo.png" alt="Muntaj Logo"></a>
+        </div>
+        <nav class="navlinks">
+            <ul>
+             <li><a href="index.html">home</a></li>
+             <li><a href="products.html">products</a></li>
+             <li><a href="pricing.html">Pricing</a></li>
+             <li><a href="cart.html">cart</a></li>
+             <li><a href="contactUs.html">contact us</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+         <button class="search" id="search button"><i class="fas fa-search"></i></button>
+         <button class="user" onclick="location.href='account.html'"><i class="fas fa-user"></i></button>
+         <button class="moon" id="theme-switcher"><i class="fas fa-moon"></i></button>
+        </div>
+    </div>
+ </header>
+   <main>
+     <div class="account">
+       <div class="auth">
+         <div id="signup">
+           <h3>create account</h3>
+           <form id="signup_form"> 
+             <input type="text" id="fname" placeholder="first name">
+             <input type="text" id="lname" placeholder="last name">
+             <input type="text" id="email" placeholder="email address">
+             <input type="text" id="signup_password" placeholder="create password">
+             <button type="submit" class="main_button">sign up</button>
+             <p id="signup error" style="color: red; font-size: 15px; margin-top: 10px;"></p>
+           </form>
+           <button class="switch_button" onclick="change()">already have an account?</button>
+          </div>
+
+          <div id="login" style="display: none;">
+            <h3>sign in</h3>
+            <form id="login_form">
+             <input type="text" id="login_email" placeholder="email address">
+             <input type="text" id="login_pass" placeholder="password">
+             <button type="submit" class="main_button">log in</button>
+             <p id="login_error" style="color: red; font-size: 15px; margin-top: 10px;"></p>
+            </form>
+            <button class="switch_button" onclick="change()">new here?</button>
+          </div>
+        </div>
+     </div>
+
+    <script>
+      function change() {
+    const signupBox = document.getElementById('signup');
+    const loginBox = document.getElementById('login');
+
+    if (signupBox.style.display === "none") {
+        signupBox.style.display = "block";
+        loginBox.style.display = "none";
+    } else {
+        signupBox.style.display = "none";
+        loginBox.style.display = "block";
+    }
+}
+
+    </script>
+   </main>
+ <footer class="footer"> 
+     <div class="fcontent">
+        <div class="footerdiv">
+            <p>quality that drives your development.</p>
+            <p>discover products that fit your needs.</p>
+        </div>
+
+        <div class="footerdiv">
+            <h3>quick services</h3>
+            <ul>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="contactUs.html">customer support</a></li>
+            </ul>
+        </div>
+
+        <div class="footerdiv">
+            <h3>Work Times</h3>
+            <p>Sat - Thu: 9:00 AM - 11:00 PM</p>
+            <p>Friday: 2:00 PM - 12:00 AM</p>
+        </div>
+
+        <div class="footerdiv">
+            <h3>contact Us</h3>
+            <p><i class="fas fa-map-marker-alt"></i> egypt</p>
+            <p><i class="fas fa-phone"></i> 01094493023</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="bottom">
+        <div class="sociallinks">
+            <h4>follow us</h4>
+            <div class="icons">
+                <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026. all rights reserved.</p>
+        </div>
+    </div>
+ </footer>
+ <script src="js/data.js"></script>
+ <script src="js/validation.js"></script>
+ <script src="js/storage.js"></script>
+ <script src="js/main.js"></script>
+</body>
+</html>

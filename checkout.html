@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Muntaj</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+      body {
+        margin: 0;
+        padding: 40px 5%;
+        font-family: sans-serif;
+         background-color: #f8f8f8;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        }
+      .checkout {
+        display: grid;
+        grid-template-columns: 1.8fr 1fr;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: start;
+       }
+       .card {
+         background: white;
+         padding: 30px;
+         border-radius: 10px;
+         box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+         border: 1px solid #eee;
+        }
+      .section { margin-bottom: 40px; }
+      h2, h3 { margin-top: 0; margin-bottom: 20px; }
+      .input { margin-bottom: 15px; width: 100%; }
+       input, select {
+         width: 100%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 6px;
+         box-sizing: border-box;
+         font-size: 14px;
+      }
+
+      .grid_inputs {
+         display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+       }
+
+      .payment {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        }
+
+      .payment input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        }
+
+      .card_content {
+       display: flex;
+       align-items: center;
+       gap: 15px;
+       padding: 18px;
+       border: 1px solid #ddd;
+       border-radius: 10px;
+       cursor: pointer;
+       transition: 0.3s;
+       background: #fff;
+       }
+
+        .payment input[type="radio"]:checked + .card_content {
+            border: 2px solid #b8860b;
+            background-color: #fdfaf0;
+        }
+
+      .card_content i { color: #b8860b; font-size: 1.2rem; width: 25px; text-align: center; }
+      .card_content span { font-weight: 600; color: #333; }
+
+      .summary { position: sticky; top: 20px; }
+      .row {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 12px;
+      }
+      .total{
+         border-top: 2px solid #eee;
+        padding-top: 15px;
+         margin-top: 15px;
+        font-weight: bold;
+         font-size: 1.1rem;
+        }
+
+      .mainbutton {
+            width: 100%;
+            padding: 16px;
+            background: #b8860b;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+       body.dark-theme { background-color: #121212; color: #fff; }
+       body.dark-theme .card { background: #1e1e1e; border-color: #333; }
+       body.dark-theme .card-content { background: #1e1e1e; border-color: #333; }
+       body.dark-theme .card-content span { color: #fff; }
+       body.dark-theme .payment-card input[type="radio"]:checked + .card-content { background-color: #2a2415; }
+       body.dark-theme input, body.dark-theme select { background: #2a2a2a; color: #fff; border-color: #444; }
+    </style>
+</head>
+<body>
+ <header>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"></a><img src="assets/logo.png" alt="Muntaj Logo"></a>
+        </div>
+        <nav class="navlinks">
+            <ul>
+             <li><a href="index.html">home</a></li>
+             <li><a href="products.html">products</a></li>
+             <li><a href="pricing.html">Pricing</a></li>
+             <li><a href="cart.html">cart</a></li>
+             <li><a href="contactUs.html">contact us</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+         <button class="search" id="search button"><i class="fas fa-search"></i></button>
+         <button class="user" onclick="location.href='account.html'"><i class="fas fa-user"></i></button>
+         <button class="moon" id="theme-switcher"><i class="fas fa-moon"></i></button>
+        </div>
+    </div>
+ </header>
+
+<main class="checkout">
+    
+    <div class="checkout_form">
+        <h2>Checkout</h2>
+
+        <div class="section">
+            <h3>Delivery Information</h3>
+            
+            <div class="grid_inputs input">
+                <input id="checkout_name" type="text" placeholder="full name">
+                <input id="checkout_pass" type="text" placeholder="password">
+            </div>
+
+            <div class="grid_inputs input">
+                <select id="City">
+                    <option value="">Select City</option>
+                    <option>cairo</option><option>hiza</option><option>alexandria</option>
+                    <option>port said</option><option>smailia</option><option>suez</option>
+                    <option>sharqiya</option><option>monofiya</option><option>daqahliya</option>
+                    <option>behira</option><option>kafr elsheikh</option><option>fayoum</option>
+                    <option>bany Suef</option><option>el menia</option><option>assiut</option>
+                    <option>qena</option><option>suhag</option><option>aswan</option>
+                </select>
+                <input id="area" type="search" placeholder="enter your area">
+            </div>
+
+            <div class="grid-inputs input">
+                <input id="street" type="text" placeholder="street name">
+                <input id="building" type="number" placeholder="building number">
+            </div>
+            
+            <div class="grid_inputs input">
+                <input type="number" placeholder="floor">
+                <input type="number" placeholder="apartment">
+            </div>
+            <div class="input">
+                <input id="checkout phone" type="number" placeholder="enter your phone">
+            </div>
+            <div class="input">
+                <input type="text" placeholder="delivery instructions (optional)">
+            </div>
+        </div>
+        <p id="checkout_error"></p>
+        <div class="section">
+            <h3>payment ways</h3>
+            <div class="payment">
+                
+                <label class="payment">
+                    <input type="radio" name="payment" value="cash">
+                    <div class="card_content">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>cash on delivery</span>
+                    </div>
+                </label>
+
+                <label class="payment">
+                    <input type="radio" name="payment" value="credit">
+                    <div class="card_content">
+                        <i class="fas fa-credit-card"></i>
+                        <span>debi or crdit card</span>
+                    </div>
+                </label>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="summary">
+        <h3>order Summary</h3>
+        <div class="row"></div>
+        <div class="shipping">
+            <span>shipping</span>
+            <span>free</span>
+        </div>
+        <div class="total">
+            <span>total</span>
+            <span id="price">50 EGP</span>
+        </div>
+
+        <button type="button" class="mainbutton">checkout</button>
+    </div>
+
+</main>
+
+ <footer class="footer"> 
+     <div class="fcontent">
+        <div class="footerdiv">
+            <p>quality that drives your development.</p>
+            <p>discover products that fit your needs.</p>
+        </div>
+
+        <div class="footerdiv">
+            <h3>quick services</h3>
+            <ul>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="contactUs.html">customer support</a></li>
+            </ul>
+        </div>
+
+        <div class="footerdiv">
+            <h3>Work Times</h3>
+            <p>Sat - Thu: 9:00 AM - 11:00 PM</p>
+            <p>Friday: 2:00 PM - 12:00 AM</p>
+        </div>
+
+        <div class="footerdiv">
+            <h3>contact Us</h3>
+            <p><i class="fas fa-map-marker-alt"></i> egypt</p>
+            <p><i class="fas fa-phone"></i> 01094493023</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="bottom">
+        <div class="sociallinks">
+            <h4>follow us</h4>
+            <div class="icons">
+                <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026. all rights reserved.</p>
+        </div>
+    </div>
+ </footer>
+ <script src="js/data.js"></script>
+ <script src="js/validation.js"></script>
+ <script src="js/storage.js"></script>
+ <script src="js/main.js"></script>
+</body>
+</html>
